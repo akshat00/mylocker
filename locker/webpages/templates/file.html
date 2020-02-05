@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>files</title>
+{% load static %}
+<link rel="stylesheet" href={% static 'css/file.css' %}>
+{%endblock%}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<div id="user_navbar">
+    <button onclick="myfunction()" id="user_button">{{request.user|title}}</button>
+    <div id="user_list">
+        <ul>
+            <li>Profile Info</li>
+            <li><a href="../logout/">Log Out</a></li>
+        </ul>
+    </div>
+</div>
+
+{%endif%}
+
+<script>
+
+    function myfunction() {
+        var list = document.getElementById('user_list');
+        list.style.display = "block";
+    }
+
+    window.onclick = function (event) {
+        if (!event.target.matches('#user_button')) {
+            var list = document.getElementById('user_list');
+            list.style.display = "None";
+        }
+    }
+</script>
+
+{% if request.user.is_authenticated %}
+<div id="upload_files_box">
+    <h1 id="heading">Upload your files here</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="file" class="file_upload">
+        <input type="submit" value="Upload" class="file_upload">
+    </form>
+</div>
+
+{% if files_present %}
+{% for item, value in file.items %}
+
+<li id='none'><a href={{value}} target="blank"> {{item}} </a></li>
+
+{% endfor %}
+{% endif %}
+
+{% else %}
+<div>
+    <h1 style="color: red; font-family: Arial, Helvetica, sans-serif; text-align: center;">Please Login to proceed
+        further.</h1>
+</div>
+{% endif %}
+
+{% endblock %}

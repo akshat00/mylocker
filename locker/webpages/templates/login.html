@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block head %}
+
+<title>Login</title>
+{% load static %} <link rel="stylesheet" href={% static 'css/login.css' %}>
+{%endblock%} {% block content %}
+<div class="error">
+  {{message}}
+</div>
+<div id="login_box">
+  <div id="title">Login</div>
+  <div id="login_body">
+    <form action="" method="POST">
+      {% csrf_token %}
+      <div>
+        <div class="inline email_box">
+          <label for="email_address">Email: </label>
+        </div>
+        <div class="inline email_box">
+          <input
+            type="email"
+            name="email_address"
+            id="email_address"
+            value="{{email}}"
+            required
+          />
+        </div>
+      </div>
+      <div>
+        <div class="inline password_box">
+          <label for="password">Password:</label>
+        </div>
+        <div class="inline password_box">
+          <input type="password" name="password" id="password" required />
+        </div>
+      </div>
+
+      <div>
+        <input type="submit" value="Login" id="submit_button" />
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

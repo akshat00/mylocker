@@ -1,0 +1,58 @@
+#login_box {
+  height: 50%;
+  width: 25%;
+  background-color: rgba(44, 39, 79, 1);
+  position: relative;
+  top: 10%;
+  left: 37%;
+}
+
+#title {
+  background-color: rgb(207, 201, 161);
+  color: rgba(44, 39, 79, 1);
+  height: 8%;
+  width: 30%;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+
+#login_body {
+  height: 80%;
+  width: 90%;
+  background-color: whitesmoke;
+}
+
+#box {
+  position: relative;
+  top: 35px;
+}
+
+.box_item {
+  margin-top: 10px;
+}
+
+#submit_button {
+  position: relative;
+  top: 80px;
+  left: 150px;
+  padding: 2 5 2 5;
+  border: 0px;
+
+  background-color: rgba(44, 39, 79, 1);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3em;
+}
+
+.errors {
+  float: left;
+  color: red;
+  position: relative;
+  left: 43%;
+  top: 50px;
+}

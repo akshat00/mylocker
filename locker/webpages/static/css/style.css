@@ -1,0 +1,58 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#navbar {
+  width: 100%;
+  height: 20%;
+  background-color: black;
+}
+
+#logo {
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+#logo_image {
+  float: left;
+  height: 80%;
+  margin: 20px 0px 0px 20px;
+}
+
+#logo_text {
+  float: left;
+  display: inline;
+
+  font-size: 2.5em;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 100px;
+  color: white;
+  letter-spacing: 4px;
+}
+
+#sign_up_button,
+#log_in_button {
+  float: right;
+
+  position: relative;
+  top: 140px;
+}
+
+.nav_button {
+  float: right;
+  margin: 0 30px 0 0;
+
+  font-size: 1.3em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 0px;
+  letter-spacing: 1px;
+}
+
+.nav_button:hover {
+  cursor: pointer;
+}

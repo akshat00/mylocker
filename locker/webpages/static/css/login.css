@@ -1,0 +1,69 @@
+#login_box {
+  height: 40%;
+  width: 25%;
+  background-color: rgba(44, 39, 79, 1);
+  position: relative;
+  top: 10%;
+  left: 37%;
+}
+
+#title {
+  background-color: rgb(207, 201, 161);
+  color: rgba(44, 39, 79, 1);
+  height: 8%;
+  width: 30%;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.8em;
+  font-weight: bolder;
+}
+
+#login_body {
+  height: 80%;
+  width: 75%;
+  background-color: whitesmoke;
+}
+
+.inline {
+  display: inline;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1em;
+}
+
+.email_box {
+  position: relative;
+  top: 80px;
+}
+
+#email_address {
+  position: relative;
+  left: 32px;
+}
+
+.password_box {
+  position: relative;
+  top: 100px;
+}
+
+#submit_button {
+  position: relative;
+  top: 130px;
+  left: 150px;
+  padding: 2 5 2 5;
+  border: 0px;
+
+  background-color: rgba(44, 39, 79, 1);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3em;
+}
+
+.error {
+  color: red;
+  position: relative;
+  left: 40%;
+  top: 80px;
+}

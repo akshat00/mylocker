@@ -1,0 +1,99 @@
+{% extends 'base.html' %} {% block head %}
+
+<title>Sign Up</title>
+{% load static %} <link rel="stylesheet" href={% static 'css/sign_up.css' %}>
+{%endblock%} {% block content %}
+<div class="errors">
+  {% for error in errors%}
+  <ul>
+    <li>{{error}}</li>
+  </ul>
+  {% endfor %}
+</div>
+<div id="login_box">
+  <div id="title">Sign Up</div>
+  <div id="login_body">
+    <form action="" method="POST">
+      {% csrf_token %}
+
+      <div id="box">
+        <div class="box_item">
+          <label for="first_name">First Name: </label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            value="{{form.first_name}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="last_name">Last Name: </label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            value="{{form.last_name}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            value="{{form.username}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="email">Email: </label>
+          <input
+            type="email"
+            name="email_address"
+            id="email"
+            value="{{form.email_address}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="password">Password: </label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            value="{{form.password}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="phone_number">Phone Number: </label>
+          <input
+            type="text"
+            name="phone_number"
+            id="phone_number"
+            value="{{form.phone_number}}"
+            required
+          />
+        </div>
+        <div class="box_item">
+          <label for="dob">Date of Birth: </label>
+          <input
+            type="date"
+            name="date_of_birth"
+            id="dob"
+            value="{{form.date_of_birth}}"
+            required
+          />
+        </div>
+      </div>
+
+      <div>
+        <input type="submit" value="Login" id="submit_button" />
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
